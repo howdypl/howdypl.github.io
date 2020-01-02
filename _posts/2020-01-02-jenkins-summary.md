@@ -17,6 +17,8 @@ tags: [Jenkins]
 # 平台架构
 <img src="https://howdypl.github.io/img/jenkins-framework.png" width = 100% height = 100% alt="平台架构图" title="平台架构图">
 
+![平台架构](https://howdypl.github.io/img/jenkins-framework.png "平台架构图")
+
 # 前期准备
 &emsp;&emsp;主要介绍为了完成Jenkins持续集成环境的搭建，并实现节点的高可用，前期需要做哪些准备。
 
