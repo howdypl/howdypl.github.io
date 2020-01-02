@@ -34,15 +34,29 @@ tags: [Jenkins]
 
 &emsp;&emsp;Centos7安装配置NFS服务和挂载的具体操作请[点击这里](https://www.cnblogs.com/lixiuran/p/7117000.html "Centos7安装配置NFS服务和挂载")
 
-## CYGWIN安装（针对Windows系统的部署主机）
+## CYGWIN安装`（针对Windows系统的部署主机）`
+&emsp;&emsp;Cygwin是在Windows操作系统上仿真Linux操作系统，是一个在Windows平台上运行的Linux模拟环境，它使用动态链接库*.dll来实现，简单来说Cywin是一个Windows的软件。
+
+&emsp;&emsp;通过Cygwin在Windows环境中安装并配置SSH的具体操作请[点击这里](https://my.oschina.net/u/658505/blog/616079)
+
+## 配置Linux服务器免密登录
 
 # 环境搭建
 
+## Jenkins安装
 
+## Jenkins配置
 
+## Jenkins集成SonarQube
 
+## Jenkins权限管理
 
-
-
+## SonarQube权限管理
 
 # 自动化部署实现
+
+## 总体方案
+
+### 流程图
+
+### CI/CD过程
