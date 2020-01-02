@@ -15,8 +15,6 @@ tags: [Jenkins]
 <!-- more -->
 
 # 平台架构
-<img src="https://howdypl.github.io/img/jenkins-framework.png" width = 100% height = 100% alt="平台架构图" title="平台架构图">
-
 ![平台架构](https://howdypl.github.io/img/jenkins-framework.png "平台架构图"){:height="100%" width="100%"}
 
 # 前期准备
