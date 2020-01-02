@@ -9,6 +9,3 @@ elasticsearch:
 2. 选择搜索的时间段（可选）
 3. 输入搜索的语句（可选）(e.g. status:200 AND extension:PHP)
 4. 选择表格需要显示的字段（可选）
-
-# 平台架构
-![平台架构图](https://github.com/howdypl/howdypl.github.io/blob/master/img/jenkins-framework.png "平台架构图")
