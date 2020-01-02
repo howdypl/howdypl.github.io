@@ -11,13 +11,20 @@ tags: [Jenkins]
 &emsp;&emsp;本文主要讲解如何利用持续集成工具——Jenkins来搭建一套持续集成环境。主要使用的工具有：
 - Jenkins版本：2.176.1
 - SonarQube版本：7.7
-- Jdk版本：1.8<!-- more -->
+- Jdk版本：1.8
+<!-- more -->
+
+# 平台架构
+![平台架构图](https://github.com/howdypl/howdypl.github.io/blob/master/img/jenkins-framework.png "平台架构图")
+
 # 前期准备
 &emsp;&emsp;主要介绍为了完成Jenkins持续集成环境的搭建，并实现节点的高可用，前期需要做哪些准备。
+
 ## jdk安装
 &emsp;&emsp;jdk主要提供Jenkins运行所需的环境，需要注意的一点是`在配置从节点的时候从节点的jdk版本要和主节点的保持一致。`
 
 &emsp;&emsp;jdk安装及环境配置的具体操作请[点击这里](https://blog.csdn.net/pang_ping/article/details/80570011 "jdk安装及环境配置的具体操作")
+
 ## NFS挂载目录
 &emsp;&emsp;进行挂载的主要目的是`保证各节点之间数据的一致性。`只需要挂载四个目录即可，分别是：
 1. maven本地仓库的目录
@@ -26,6 +33,7 @@ tags: [Jenkins]
 4. Jenkins工作空间所在的目录
 
 &emsp;&emsp;Centos7安装配置NFS服务和挂载的具体操作请[点击这里](https://www.cnblogs.com/lixiuran/p/7117000.html "Centos7安装配置NFS服务和挂载")
+
 ## CYGWIN安装（针对Windows系统的部署主机）
 
 # 环境搭建
