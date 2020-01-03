@@ -51,10 +51,10 @@ tags: [Jenkins]
 
 &emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/ "Jenkins下载地址")。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。
 
-### Jenkins安装与配置
+### 安装Jenkins
 &emsp;&emsp;我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/ "官方参考文档")参考官方文档。
 
-#### 初始化Jenkins和管理员用户
+#### 1、启动Jenkins
 &emsp;&emsp;下载好jenkins.war包之后，切换到下载目录，然后执行如下命令：
 
 >&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行"java -jar jenkins.war --ajp13Port=-1 --httpPort=8081 > log_jenkins.log 2>&1 &"的方式修改
@@ -62,16 +62,25 @@ tags: [Jenkins]
 ```
   java -jar jenkins.war > log_jenkins.log 2>&1 &
 ```
-&emsp;&emsp;Jenkins的工作目录，默认是：/root/.jenkins。
+&emsp;&emsp;Jenkins的工作目录，默认是：/用户名/.jenkins。
 也可以自定义Jenkins的工作目录，设置JENKINS_HOME环境变量，启动 jenkins.war后将被解压到JENKINS_HOME目录下，同时所有Jenkins的 plugins和配置文件等也将被写入到JENKINS_HOME所设置的目录下。
 
 &emsp;&emsp;启动以后通过查看日志输出，可以发现生成的有随机口令
 
 ![随机口令](https://howdypl.github.io/img/jenkins/jenkins-1.png "随机口令"){:height="100%" width="100%"}
 
-&emsp;&emsp;第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。注意控制台输出的口令，复制下来。在浏览器中输入地址：http://localhost:8080/
+#### 2、网页打开配置
 
-![随机口令](https://howdypl.github.io/img/jenkins/jenkins-2.png "随机口令"){:height="100%" width="100%"}
+- **第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。**
+注意控制台输出的口令，复制下来。在浏览器中输入地址：http://localhost:8080/
+
+![解锁Jenkins](https://howdypl.github.io/img/jenkins/jenkins-2.png "解锁Jenkins"){:height="100%" width="100%"}
+
+- **选择需要安装的插件**
+选择默认推荐即可，会安装通用的社区插件，剩下的可以在使用的时候再进行安装。
+
+![安装插件](https://howdypl.github.io/img/jenkins/jenkins-3.png "安装插件"){:height="100%" width="100%"}
+
 
 ## 配置Jenkins从节点
 
