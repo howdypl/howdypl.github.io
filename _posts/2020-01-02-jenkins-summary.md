@@ -123,8 +123,9 @@ Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/
 &emsp;&emsp;SonarQube权限管理的具体操作请[点击这里](https://blog.csdn.net/danielchan2518/article/details/72792897 "SonarQube权限管理")查看
 
 # 自动化部署实现
+&emsp;&emsp;自动化部署的实现主要分为三个部分，`分别是总体方案的设计`、`参数化构建的配置`和`groovy脚本的编写`。
 
-## 总体方案
+## 总体方案的设计
 
 ### 流程图
 ![方案流程图](https://howdypl.github.io/img/jenkins/jenkins-8.png "方案流程图"){:height="100%" width="100%"}
