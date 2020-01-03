@@ -108,15 +108,19 @@ Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/
 配置Jenkins从节点的具体操作请[点击这里](https://www.jianshu.com/p/e93229012ac0 "配置Jenkins从节点")，`再次强调各节点之间的JDK版本要保持一致`
 
 ## Jenkins集成SonarQube
-&emsp;&emsp;SonarQube 是一款用于代码质量管理的开源工具，它主要用于管理源代码的质量。 通过插件形式，可以支持众多计算机语言，通过代码规则检测工具来检测你的代码，帮助你发现代码的漏洞，Bug，异味等信息。
+&emsp;&emsp;SonarQube是一款用于代码质量管理的开源工具，它主要用于源代码质量的管理。通过插件形式，可以支持众多计算机语言，通过代码规则检测工具来检测代码，帮助开发人员发现代码的漏洞，Bug，异味等信息。
 
-&emsp;&emsp;Jenkins集成SonarQube的具体操作请[点击这里](https://blog.csdn.net/jin_hongxia/article/details/80844322 "Jenkins集成SonarQube")
+&emsp;&emsp;`安装SonarQube的具体操作`请[点击这里](https://www.jianshu.com/p/349b4a0ac5b8)查看
+
+&emsp;&emsp;`SonarQube的扫描器有很多种`，具体请[点击这里](https://docs.sonarqube.org/latest/analysis/overview/)查看
+
+&emsp;&emsp;`Jenkins集成SonarScanner for Maven`的具体操作请[点击这里](https://blog.csdn.net/jin_hongxia/article/details/80844322 "Jenkins集成SonarScanner for Maven")
 
 ## Jenkins权限管理
-&emsp;&emsp;Jenkins粒度比较细的权限管理需要借助插件`Role-based Authorization Strategy`，具体操作请[点击这里](https://www.cnblogs.com/sker/p/9255338.html "Jenkins权限管理")
+&emsp;&emsp;Jenkins粒度比较细的权限管理需要借助插件`Role-based Authorization Strategy`，具体操作请[点击这里](https://www.cnblogs.com/sker/p/9255338.html "Jenkins权限管理")查看
 
 ## SonarQube权限管理
-&emsp;&emsp;SonarQube权限管理的具体操作请[点击这里](https://blog.csdn.net/danielchan2518/article/details/72792897 "SonarQube权限管理")
+&emsp;&emsp;SonarQube权限管理的具体操作请[点击这里](https://blog.csdn.net/danielchan2518/article/details/72792897 "SonarQube权限管理")查看
 
 # 自动化部署实现
 
