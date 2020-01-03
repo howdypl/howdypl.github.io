@@ -78,19 +78,19 @@ tags: [Jenkins]
 
 ![安装插件](https://howdypl.github.io/img/jenkins/jenkins-3.png "安装插件"){:height="100%" width="100%"}
 
-&emsp;&emsp;开始安装，由于网络原因，有一些插件会安装失败。
+3. 开始安装，由于网络原因，有一些插件可能会安装失败。
 
 ![安装插件过程中](https://howdypl.github.io/img/jenkins/jenkins-4.png "安装插件过程中"){:height="100%" width="100%"}
 
-3. **设置Admin用户和密码**
+4. **设置Admin用户和密码**
 
 ![初始化管理员](https://howdypl.github.io/img/jenkins/jenkins-5.png "初始化管理员"){:height="100%" width="100%"}
 
-4. **安装完成**
+5. **安装完成**
 
 ![安装完成](https://howdypl.github.io/img/jenkins/jenkins-6.png "安装完成"){:height="100%" width="100%"}
 
-5. **登录Jenkins**
+6. **登录Jenkins**
 
 ![登录Jenkins](https://howdypl.github.io/img/jenkins/jenkins-7.png "登录Jenkins"){:height="100%" width="100%"}
 
