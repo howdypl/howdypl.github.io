@@ -82,7 +82,7 @@ tags: [Jenkins]
 
 ![安装插件](https://howdypl.github.io/img/jenkins/jenkins-3.png "安装插件"){:height="100%" width="100%"}
 
-- 开始安装，由于网络原因，有一些插件可能会安装失败。
+- **开始安装，由于网络原因，有一些插件可能会安装失败。**
 
 ![安装插件过程中](https://howdypl.github.io/img/jenkins/jenkins-4.png "安装插件过程中"){:height="100%" width="100%"}
 
@@ -98,11 +98,14 @@ tags: [Jenkins]
 
 ![登录Jenkins](https://howdypl.github.io/img/jenkins/jenkins-7.png "登录Jenkins"){:height="100%" width="100%"}
 
+### Jenkins使用简介
+
+Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/9724036.html#auto_id_9 "Jenkins使用简介")
+
 ## 配置Jenkins从节点
+&emsp;&emsp;Jenkins的分布式构建，在Jenkins的配置中叫做节点，分布式构建能够让同一套代码或项目在不同的环境(如：Windows和Linux系统)中编译、部署等。节点服务器不需要安装jenkins，只需要运行一个slave节点服务，构建事件的分发由master端（jenkins主服务）来执行。
 
-### 配置Linux从节点
-
-### 配置Windows从节点
+配置Jenkins从节点的具体操作请[点击这里](https://www.jianshu.com/p/e93229012ac0)，`再次强调各节点之间的JDK版本要保持一致`
 
 ## Jenkins集成SonarQube
 
