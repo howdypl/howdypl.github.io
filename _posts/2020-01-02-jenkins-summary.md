@@ -49,14 +49,16 @@ tags: [Jenkins]
 ## Jenkins安装及使用简介
 &emsp;&emsp;主要介绍Jenkins的安装过程和使用的简介
 
-&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/)。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/)参考官方文档。
+&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/)。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。
 
 ### Jenkins安装与配置
+&emsp;&emsp;我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/)参考官方文档。
 
 #### 初始化Jenkins和管理员用户
 &emsp;&emsp;下载好jenkins.war包之后，切换到下载目录，然后执行如下命令：
 
->&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行”java –jar Jenkins.war --httpPort=80”的方式修改
+>&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行"java -jar jenkins.war --ajp13Port=-1 --httpPort=8081"的方式修改
+
 ```
   java -jar jenkins.war 
 ```
