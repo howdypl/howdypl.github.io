@@ -37,31 +37,41 @@ tags: [Jenkins]
 ## CYGWIN安装`（针对Windows系统的部署主机）`
 &emsp;&emsp;Cygwin是在Windows操作系统上仿真Linux操作系统，是一个在Windows平台上运行的Linux模拟环境，它使用动态链接库*.dll来实现，简单来说Cywin是一个Windows的软件。
 
-&emsp;&emsp;通过Cygwin在Windows环境中安装并配置SSH的具体操作请[点击这里](https://my.oschina.net/u/658505/blog/616079)。
+&emsp;&emsp;通过Cygwin在Windows环境中安装并配置SSH的具体操作请[点击这里](https://my.oschina.net/u/658505/blog/616079 "通过Cygwin在Windows环境中安装并配置SSH")。
 
 ## 配置Linux服务器免密登录
 &emsp;&emsp;实现系统的自动化部署需要配置Linux服务器的免密登录，`方便远程执行启动脚本、上传发布包和拉取备份包等。`配置免密登录的时候Jenkins的主从节点共用一个私钥，所有的部署主机共用一个公钥。
 
-&emsp;&emsp;配置Linux服务器的免密登录的具体操作请[点击这里](https://www.cnblogs.com/leafinwind/p/10629547.html)。
+&emsp;&emsp;配置Linux服务器的免密登录的具体操作请[点击这里](https://www.cnblogs.com/leafinwind/p/10629547.html "配置Linux服务器的免密登录")。
 
 # 环境搭建
 
 ## Jenkins安装及使用简介
 &emsp;&emsp;主要介绍Jenkins的安装过程和使用的简介
 
-&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/)。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。
+&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/ "Jenkins下载地址")。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。
 
 ### Jenkins安装与配置
-&emsp;&emsp;我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/)参考官方文档。
+&emsp;&emsp;我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/ "官方参考文档")参考官方文档。
 
 #### 初始化Jenkins和管理员用户
 &emsp;&emsp;下载好jenkins.war包之后，切换到下载目录，然后执行如下命令：
 
->&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行"java -jar jenkins.war --ajp13Port=-1 --httpPort=8081"的方式修改
+>&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行"java -jar jenkins.war --ajp13Port=-1 --httpPort=8081 > log_jenkins.log 2>&1 &"的方式修改
 
 ```
-  java -jar jenkins.war 
+  java -jar jenkins.war > log_jenkins.log 2>&1 &
 ```
+&emsp;&emsp;Jenkins的工作目录，默认是：/root/.jenkins。
+也可以自定义Jenkins的工作目录，设置JENKINS_HOME环境变量，启动 jenkins.war后将被解压到JENKINS_HOME目录下，同时所有Jenkins的 plugins和配置文件等也将被写入到JENKINS_HOME所设置的目录下。
+
+&emsp;&emsp;启动以后通过查看日志输出，可以发现生成的有随机口令
+
+![随机口令](https://howdypl.github.io/img/jenkins/jenkins-1.png "随机口令"){:height="100%" width="100%"}
+
+&emsp;&emsp;第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。注意控制台输出的口令，复制下来。在浏览器中输入地址：http://localhost:8080/
+
+![随机口令](https://howdypl.github.io/img/jenkins/jenkins-2.png "随机口令"){:height="100%" width="100%"}
 
 ## 配置Jenkins从节点
 
