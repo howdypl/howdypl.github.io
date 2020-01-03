@@ -46,15 +46,11 @@ tags: [Jenkins]
 
 # 环境搭建
 
-## Jenkins安装及使用简介
-&emsp;&emsp;主要介绍Jenkins的安装过程和使用的简介
 
-&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/ "Jenkins下载地址")。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。
+## 安装Jenkins
+&emsp;&emsp;Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，下载地址请[点击这里](https://jenkins.io/zh/download/ "Jenkins下载地址")。Jenkins提供了Windows、Linux和OS X平台的安装包。最简便的还是使用提供的war包直接启动，但是此时必须保证系统中已经安装了jdk，最好是 jdk1.5以上。我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/ "官方参考文档")参考官方文档。
 
-### 安装Jenkins
-&emsp;&emsp;我这里展示的是直接运行war包的方式，其它安装方式请[点击这里](https://jenkins.io/zh/doc/book/getting-started/ "官方参考文档")参考官方文档。
-
-#### 1、启动Jenkins
+### 启动Jenkins
 &emsp;&emsp;下载好jenkins.war包之后，切换到下载目录，然后执行如下命令：
 
 >&emsp;`在启动之前要确保jdk环境已经准备完成。`默认情况下端口是8080，如果要使用其他端口启动，可以通过命令行"java -jar jenkins.war --ajp13Port=-1 --httpPort=8081 > log_jenkins.log 2>&1 &"的方式修改
@@ -69,14 +65,14 @@ tags: [Jenkins]
 
 ![随机口令](https://howdypl.github.io/img/jenkins/jenkins-1.png "随机口令"){:height="100%" width="100%"}
 
-#### 2、网页打开配置
+### 网页打开后进行配置
 
-- **第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。**
+1. **第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。**
 注意控制台输出的口令，复制下来。在浏览器中输入地址：`http://localhost:8080/`
 
 ![解锁Jenkins](https://howdypl.github.io/img/jenkins/jenkins-2.png "解锁Jenkins"){:height="100%" width="100%"}
 
-- **选择需要安装的插件**
+2. **选择需要安装的插件**
 
 &emsp;&emsp;选择默认推荐即可，会安装通用的社区插件，剩下的可以在使用的时候再进行安装。
 
@@ -86,15 +82,15 @@ tags: [Jenkins]
 
 ![安装插件过程中](https://howdypl.github.io/img/jenkins/jenkins-4.png "安装插件过程中"){:height="100%" width="100%"}
 
-- **设置Admin用户和密码**
+3. **设置Admin用户和密码**
 
 ![初始化管理员](https://howdypl.github.io/img/jenkins/jenkins-5.png "初始化管理员"){:height="100%" width="100%"}
 
-- **安装完成**
+4. **安装完成**
 
 ![安装完成](https://howdypl.github.io/img/jenkins/jenkins-6.png "安装完成"){:height="100%" width="100%"}
 
-- **登录Jenkins**
+5. **登录Jenkins**
 
 ![登录Jenkins](https://howdypl.github.io/img/jenkins/jenkins-7.png "登录Jenkins"){:height="100%" width="100%"}
 
