@@ -123,5 +123,6 @@ Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/
 ## 总体方案
 
 ### 流程图
+![方案流程图](https://howdypl.github.io/img/jenkins/jenkins-8.png "方案流程图"){:height="100%" width="100%"}
 
 ### CI/CD过程
