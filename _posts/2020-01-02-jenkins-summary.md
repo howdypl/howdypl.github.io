@@ -72,15 +72,31 @@ tags: [Jenkins]
 #### 2、网页打开配置
 
 - **第一次启动Jenkins时，出于安全考虑，Jenkins会自动生成一个随机的安装口令。**
-注意控制台输出的口令，复制下来。在浏览器中输入地址：http://localhost:8080/
+注意控制台输出的口令，复制下来。在浏览器中输入地址：`http://localhost:8080/`
 
 ![解锁Jenkins](https://howdypl.github.io/img/jenkins/jenkins-2.png "解锁Jenkins"){:height="100%" width="100%"}
 
 - **选择需要安装的插件**
-选择默认推荐即可，会安装通用的社区插件，剩下的可以在使用的时候再进行安装。
+
+&emsp;&emsp;选择默认推荐即可，会安装通用的社区插件，剩下的可以在使用的时候再进行安装。
 
 ![安装插件](https://howdypl.github.io/img/jenkins/jenkins-3.png "安装插件"){:height="100%" width="100%"}
 
+&emsp;&emsp;开始安装，由于网络原因，有一些插件会安装失败。
+
+![安装插件过程中](https://howdypl.github.io/img/jenkins/jenkins-4.png "安装插件过程中"){:height="100%" width="100%"}
+
+- **设置Admin用户和密码**
+
+![初始化管理员](https://howdypl.github.io/img/jenkins/jenkins-5.png "初始化管理员"){:height="100%" width="100%"}
+
+- **安装完成**
+
+![安装完成](https://howdypl.github.io/img/jenkins/jenkins-6.png "安装完成"){:height="100%" width="100%"}
+
+- **登录Jenkins**
+
+![登录Jenkins](https://howdypl.github.io/img/jenkins/jenkins-7.png "登录Jenkins"){:height="100%" width="100%"}
 
 ## 配置Jenkins从节点
 
