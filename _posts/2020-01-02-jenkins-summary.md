@@ -105,11 +105,15 @@ Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/
 ## 配置Jenkins从节点
 &emsp;&emsp;Jenkins的分布式构建，在Jenkins的配置中叫做节点，分布式构建能够让同一套代码或项目在不同的环境(如：Windows和Linux系统)中编译、部署等。节点服务器不需要安装jenkins，只需要运行一个slave节点服务，构建事件的分发由master端（jenkins主服务）来执行。
 
-配置Jenkins从节点的具体操作请[点击这里](https://www.jianshu.com/p/e93229012ac0)，`再次强调各节点之间的JDK版本要保持一致`
+配置Jenkins从节点的具体操作请[点击这里](https://www.jianshu.com/p/e93229012ac0 "配置Jenkins从节点")，`再次强调各节点之间的JDK版本要保持一致`
 
 ## Jenkins集成SonarQube
+&emsp;&emsp;SonarQube 是一款用于代码质量管理的开源工具，它主要用于管理源代码的质量。 通过插件形式，可以支持众多计算机语言，通过代码规则检测工具来检测你的代码，帮助你发现代码的漏洞，Bug，异味等信息。
+
+Jenkins集成SonarQube的具体操作请[点击这里](https://blog.csdn.net/jin_hongxia/article/details/80844322 "Jenkins集成SonarQube")
 
 ## Jenkins权限管理
+Jenkins粒度比较细的权限管理需要借助插件`Role-based Authorization Strategy`，具体操作请[点击这里](https://www.cnblogs.com/sker/p/9255338.html "Jenkins权限管理")
 
 ## SonarQube权限管理
 
