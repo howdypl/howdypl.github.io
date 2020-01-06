@@ -193,14 +193,14 @@ Jenkins的使用简介具体请[点击这里](https://www.cnblogs.com/along21/p/
 &emsp;&emsp;此步骤将重启目标服务器上的项目。该步骤仅选择“Restart”才会执行。
 
 ## 参数化构建配置
-&emsp;&emsp;由于在总体方案设计的时候提供了`发布项目、回退项目和重启项目`这三个功能，还需要动态的选择需要发布的节点，因此采用参数化构建的方式。
+&emsp;&emsp;由于在总体方案设计的时候提供了`发布项目、回退项目和重启项目`这三个功能，还需要动态的选择需要发布的节点，因此采用参数化构建的方式。（可能需要安装插件）
 
 &emsp;&emsp;参数化构建的简单操作请[点击这里](https://zhuanlan.zhihu.com/p/42139069 "参数化构建的简单操作")查看。
 
 ### 添加选项参数
 &emsp;&emsp;此步骤主要用于参数化构建时生成一个下拉框,可以选择执行的不同功能。
 
-&emsp;&emsp;`具体步骤：选中“参数化构建过程”——>选中“添加参数”——>选中“选项参数”`
+&emsp;&emsp;**`具体步骤：选中“参数化构建过程”——>选中“添加参数”——>选中“选项参数”`**
 
 ![添加选项参数1](https://howdypl.github.io/img/jenkins/jenkins-9-1.png "添加选项参数1"){:height="100%" width="100%"}
 
@@ -216,7 +216,45 @@ Restart
 ```
 ![添加选项参数2](https://howdypl.github.io/img/jenkins/jenkins-9-2.png "添加选项参数2"){:height="100%" width="100%"}
 
+### 添加动态选项参数
+&emsp;&emsp;**`具体步骤：选中“参数化构建过程”——>选中“添加参数”——>选中“Active Choices Reactive Parameter”`**
 
+&emsp;&emsp;当选择Rollback时，会在param_rollback_pkg处，以下拉框的形式显示出所有的备份包`（默认选中最近一次备份的备份包）`
+
+![添加动态选项参数1](https://howdypl.github.io/img/jenkins/jenkins-10-1.png "添加动态选项参数1"){:height="100%" width="100%"}
+
+```
+Name：param_rollback_pkg
+Groovy Script:
+path = param_backup_path+"/essapi-dev"
+rollback=['bash', '-c', "ls -t1 ${path} "].execute().text.readLines()
+
+if (action.equals("RollBack") && rollback) {
+return rollback
+}else {
+	return ["NONE"]
+}
+Description：
+<div style="color:#ff3300;font-weight:1600;font-weight:bold;">【请谨慎选择回退版本，NONE - 无可回退的版本】</div>
+
+```
+![添加动态选项参数2](https://howdypl.github.io/img/jenkins/jenkins-10-2.png "添加动态选项参数2"){:height="100%" width="100%"}
+
+### 添加扩展选项参数
+&emsp;&emsp;在构建时，生成多选框，选择需要部署的服务器节点。
+
+&emsp;&emsp;**`具体步骤：选中“参数化构建过程”——>选中“添加参数”——>选中“Extended Choice Parameter”`**
+
+![添加扩展选项参数1](https://howdypl.github.io/img/jenkins/jenkins-11-1.png "添加扩展选项参数1"){:height="100%" width="100%"}
+
+注意：
+Choose Source for Value和Choose Source for Default Value中需点击value,然后按照 `远程服务器名1:远程服务器ip1:端口1,远程服务器名2:远程服务器ip2:端口2 `的格式填写
+例如 `C1:192.168.1.1:22,C1:192.168.1.66:22`
+
+![添加扩展选项参数2](https://howdypl.github.io/img/jenkins/jenkins-11-2.png "添加扩展选项参数2"){:height="100%" width="100%"}
+
+### 最终效果
+![最终效果](https://howdypl.github.io/img/jenkins/jenkins-12.png "最终效果"){:height="100%" width="100%"}
 
 ## groovy脚本编写
 
