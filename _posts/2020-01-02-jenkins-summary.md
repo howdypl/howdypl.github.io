@@ -247,9 +247,7 @@ Description：
 
 ![添加扩展选项参数1](https://howdypl.github.io/img/jenkins/jenkins-11-1.png "添加扩展选项参数1"){:height="100%" width="100%"}
 
-注意：
-Choose Source for Value和Choose Source for Default Value中需点击value,然后按照 `远程服务器名1:远程服务器ip1:端口1,远程服务器名2:远程服务器ip2:端口2 `的格式填写
-例如 `C1:192.168.1.1:22,C1:192.168.1.66:22`
+&emsp;&emsp;注意：Choose Source for Value和Choose Source for Default Value中需点击value,然后按照 `远程服务器名1:远程服务器ip1:端口1,远程服务器名2:远程服务器ip2:端口2 `的格式填写。例如 `C1:192.168.1.1:22,C1:192.168.1.66:22`
 
 ![添加扩展选项参数2](https://howdypl.github.io/img/jenkins/jenkins-11-2.png "添加扩展选项参数2"){:height="100%" width="100%"}
 
@@ -257,7 +255,7 @@ Choose Source for Value和Choose Source for Default Value中需点击value,然�
 ![最终效果](https://howdypl.github.io/img/jenkins/jenkins-12.png "最终效果"){:height="100%" width="100%"}
 
 ## groovy脚本编写
-groovy脚本的编写采用的是Jenkins流水线的声明式语法，具体请[点击这里](https://jenkins.io/zh/doc/book/pipeline/syntax/ "Jenkins流水线的声明式语法")查看
+&emsp;&emsp;groovy脚本的编写采用的是Jenkins流水线的声明式语法，具体请[点击这里](https://jenkins.io/zh/doc/book/pipeline/syntax/ "Jenkins流水线的声明式语法")查看
 
 ```
 import java.text.SimpleDateFormat
