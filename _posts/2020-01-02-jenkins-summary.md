@@ -257,6 +257,7 @@ Choose Source for Value和Choose Source for Default Value中需点击value,然�
 ![最终效果](https://howdypl.github.io/img/jenkins/jenkins-12.png "最终效果"){:height="100%" width="100%"}
 
 ## groovy脚本编写
+groovy脚本的编写采用的是Jenkins流水线的声明式语法，具体请[点击这里](https://jenkins.io/zh/doc/book/pipeline/syntax/ "Jenkins流水线的声明式语法")查看
 
 ```
 import java.text.SimpleDateFormat
@@ -710,6 +711,7 @@ pipeline {
         }
     }
 
+    //此处是job执行完成以后进行短信通知，具体是使用http request插件调用短信发送接口
     post {
         success {
             script{
