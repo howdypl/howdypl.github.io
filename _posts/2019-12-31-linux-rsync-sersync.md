@@ -3,7 +3,7 @@ layout: post
 title:  "Linux通过Rsync+Sersync实现数据实时同步"
 date:  2019-12-31 14:34:00
 categories: Linux
-tags: [Linx, Rsync]
+tags: [Linux, Rsync]
 ---
 # 前言
 由于项目需求需要对数据进行实时同步，因此在网上调研了一下实现数据实时同步的解决方案，在调研中发现主要的方案有：
